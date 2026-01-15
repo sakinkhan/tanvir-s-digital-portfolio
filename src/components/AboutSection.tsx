@@ -7,7 +7,8 @@ const highlights = [
   {
     icon: Code2,
     title: "Clean Code",
-    description: "Writing maintainable, scalable code that stands the test of time.",
+    description:
+      "Writing maintainable, scalable code that stands the test of time.",
   },
   {
     icon: Palette,
@@ -42,30 +43,38 @@ const AboutSection = () => {
               <span className="gradient-text">digital experiences</span>
             </h2>
             <p className="section-subheading mb-6">
-              I'm a full-stack developer based in Bangladesh with a passion for creating 
-              beautiful, functional, and user-centered digital experiences. With over 5 years 
-              of experience in the field, I am always looking for new and innovative ways 
-              to bring my clients' visions to life.
+              I'm a full-stack developer based in Australia with a passion for
+              creating beautiful, functional, and user-centered digital
+              experiences. With over 5 years of experience in the field, I am
+              always looking for new and innovative ways to bring my clients'
+              visions to life.
             </p>
             <p className="text-muted-foreground mb-8">
-              I specialize in React, Node.js, and modern web technologies. When I'm not 
-              coding, you'll find me exploring new technologies, contributing to open-source 
-              projects, or enjoying a good cup of coffee.
+              I specialize in React, Node.js, and modern web technologies. When
+              I'm not coding, you'll find me exploring new technologies,
+              contributing to open-source projects, or enjoying a good cup of
+              coffee.
             </p>
 
             {/* Stats */}
             <div className="flex gap-8 flex-wrap">
               <div>
                 <div className="text-3xl font-bold gradient-text">50+</div>
-                <div className="text-sm text-muted-foreground">Projects Completed</div>
+                <div className="text-sm text-muted-foreground">
+                  Projects Completed
+                </div>
               </div>
               <div>
                 <div className="text-3xl font-bold gradient-text">30+</div>
-                <div className="text-sm text-muted-foreground">Happy Clients</div>
+                <div className="text-sm text-muted-foreground">
+                  Happy Clients
+                </div>
               </div>
               <div>
                 <div className="text-3xl font-bold gradient-text">5+</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
+                <div className="text-sm text-muted-foreground">
+                  Years Experience
+                </div>
               </div>
             </div>
           </motion.div>
@@ -91,7 +100,9 @@ const AboutSection = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                  <p className="text-muted-foreground text-sm">
+                    {item.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
