@@ -123,8 +123,8 @@ const HeroSection = () => {
             <div className="relative">
               <motion.div
                 className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary/20 to-accent/10 p-1"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                animate={{ y: [0, -15, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
                 <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
                   <img 
