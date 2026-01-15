@@ -4,13 +4,42 @@ import { useRef } from "react";
 
 const skills = {
   frontend: [
-    "JavaScript", "React", "TypeScript", "Next.js", "Tailwind CSS", "DaisyUI", "Framer Motion", "Vue.js"
+    "JavaScript (ES6+)",
+    "React",
+    "Next.js",
+    "HTML",
+    "CSS",
+    "Tailwind CSS",
+    "DaisyUI",
+    "Responsive UI Design",
+    "Performance Optimisation",
   ],
   backend: [
-    "Node.js", "Express", "PostgreSQL", "MongoDB", "GraphQL", "REST APIs"
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Firebase",
+    "REST API Design",
+    "JWT Authentication",
+    "System Integration",
+  ],
+  dataAndSas: [
+    "SAS Viya",
+    "SAS Visual Investigator",
+    "SAS Visual Analytics",
+    "Base SAS",
+    "SAS SQL",
+    "Data Analysis & Reporting",
   ],
   tools: [
-    "Git", "Docker", "AWS", "Vercel", "Figma", "CI/CD"
+    "Git",
+    "Swagger",
+    "Postman",
+    "Browser DevTools",
+    "Azure DevOps",
+    "SharePoint",
+    "Adobe Photoshop",
+    "Adobe Illustrator",
   ],
 };
 
@@ -37,7 +66,7 @@ const SkillsSection = () => {
     <section id="skills" className="py-24 md:py-32 relative">
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           ref={ref}
@@ -51,11 +80,12 @@ const SkillsSection = () => {
             Technologies I <span className="gradient-text">work with</span>
           </h2>
           <p className="section-subheading mx-auto">
-            I'm constantly learning and adapting to new technologies to deliver the best solutions.
+            I'm constantly learning and adapting to new technologies to deliver
+            the best solutions.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Frontend */}
           <motion.div
             className="glass-card p-6"
@@ -75,7 +105,10 @@ const SkillsSection = () => {
                   key={skill}
                   className="skill-tag"
                   variants={itemVariants}
-                  whileHover={{ scale: 1.05, borderColor: "hsl(var(--primary))" }}
+                  whileHover={{
+                    scale: 1.05,
+                    borderColor: "hsl(var(--primary))",
+                  }}
                 >
                   {skill}
                 </motion.span>
@@ -102,7 +135,10 @@ const SkillsSection = () => {
                   key={skill}
                   className="skill-tag"
                   variants={itemVariants}
-                  whileHover={{ scale: 1.05, borderColor: "hsl(var(--primary))" }}
+                  whileHover={{
+                    scale: 1.05,
+                    borderColor: "hsl(var(--primary))",
+                  }}
                 >
                   {skill}
                 </motion.span>
@@ -110,6 +146,37 @@ const SkillsSection = () => {
             </motion.div>
           </motion.div>
 
+          {/* Data & SAS */}
+          <motion.div
+            className="glass-card p-6"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <h3 className="text-lg font-semibold mb-4 text-center">
+              Data & SAS
+            </h3>
+            <motion.div
+              className="flex flex-wrap gap-2 justify-center"
+              variants={containerVariants}
+              initial="hidden"
+              animate={isInView ? "visible" : "hidden"}
+            >
+              {skills.dataAndSas.map((skill) => (
+                <motion.span
+                  key={skill}
+                  className="skill-tag"
+                  variants={itemVariants}
+                  whileHover={{
+                    scale: 1.05,
+                    borderColor: "hsl(var(--primary))",
+                  }}
+                >
+                  {skill}
+                </motion.span>
+              ))}
+            </motion.div>
+          </motion.div>
           {/* Tools */}
           <motion.div
             className="glass-card p-6"
@@ -117,7 +184,9 @@ const SkillsSection = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <h3 className="text-lg font-semibold mb-4 text-center">Tools & DevOps</h3>
+            <h3 className="text-lg font-semibold mb-4 text-center">
+              Tools & DevOps
+            </h3>
             <motion.div
               className="flex flex-wrap gap-2 justify-center"
               variants={containerVariants}
@@ -129,7 +198,10 @@ const SkillsSection = () => {
                   key={skill}
                   className="skill-tag"
                   variants={itemVariants}
-                  whileHover={{ scale: 1.05, borderColor: "hsl(var(--primary))" }}
+                  whileHover={{
+                    scale: 1.05,
+                    borderColor: "hsl(var(--primary))",
+                  }}
                 >
                   {skill}
                 </motion.span>

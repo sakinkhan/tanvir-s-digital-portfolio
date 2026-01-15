@@ -6,11 +6,11 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Background gradient */}
-      <div 
+      <div
         className="absolute inset-0 opacity-50"
         style={{ background: "var(--gradient-hero)" }}
       />
-      
+
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -42,34 +42,33 @@ const HeroSection = () => {
             >
               Hello, I'm
             </motion.p>
-            
+
             <motion.h1
               className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
-              Tanvir Hossain{" "}
-              <span className="gradient-text">Khan</span>
+              Tanvir Hossain <span className="gradient-text">Khan</span>
             </motion.h1>
-            
+
             <motion.p
               className="text-xl md:text-2xl text-muted-foreground mb-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
             >
-              Full-Stack Web Developer
+              Technical Consultant & Full-Stack Developer
             </motion.p>
-            
+
             <motion.p
               className="text-muted-foreground max-w-md mx-auto lg:mx-0 mb-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              I craft beautiful, performant web applications with modern technologies. 
-              Turning ideas into digital reality, one line of code at a time.
+              I design and engineer scalable web applications, transforming
+              real-world problems into clean, dependable code.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -104,10 +103,20 @@ const HeroSection = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.7 }}
             >
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <a
+                href="https://github.com/sakinkhan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
                 <Github size={18} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <a
+                href="https://www.linkedin.com/in/tanvir-hossain-khan/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon"
+              >
                 <Linkedin size={18} />
               </a>
             </motion.div>
@@ -125,21 +134,21 @@ const HeroSection = () => {
                 className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-primary/20 to-accent/10 p-1"
                 initial={{ y: 0 }}
                 animate={{ y: [0, -12, 0] }}
-                transition={{ 
-                  duration: 4, 
-                  repeat: Infinity, 
-                  ease: "easeInOut"
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
                 }}
               >
                 <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
-                  <img 
-                    src={profilePhoto} 
-                    alt="Tanvir Hossain Khan" 
+                  <img
+                    src={profilePhoto}
+                    alt="Tanvir Hossain Khan"
                     className="w-[95%] h-[95%] rounded-full object-cover"
                   />
                 </div>
               </motion.div>
-              
+
               {/* Floating badge */}
               <motion.div
                 className="absolute -bottom-2 -right-2 glass-card px-4 py-2"

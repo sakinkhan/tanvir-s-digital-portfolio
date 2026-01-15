@@ -43,29 +43,41 @@ const AboutSection = () => {
               <span className="gradient-text">digital experiences</span>
             </h2>
             <p className="section-subheading mb-6">
-              I'm a full-stack developer based in Australia with a passion for
-              creating beautiful, functional, and user-centered digital
-              experiences. With over 5 years of experience in the field, I am
-              always looking for new and innovative ways to bring my clients'
-              visions to life.
+              My programming journey started with curiosity and slowly turned into something
+              more serious once I began working on real systems used by real people. With a
+              background in Business Informatics, I learned early that good software isn’t
+              just about writing code—it’s about understanding problems, navigating
+              constraints, and building solutions that actually hold up in production.
+              Today, I work as a Technical Consultant in Australia, delivering enterprise and
+              government-grade applications across modern web stacks and the SAS Viya
+              ecosystem.
             </p>
+
             <p className="text-muted-foreground mb-8">
-              I specialize in React, Node.js, and modern web technologies. When
-              I'm not coding, you'll find me exploring new technologies,
-              contributing to open-source projects, or enjoying a good cup of
-              coffee.
+              The work I enjoy most sits at the intersection of clean UI and
+              dependable systems. I like taking unclear or messy requirements
+              and turning them into simple, maintainable solutions—whether
+              that’s building React and Next.js applications or developing
+              custom IMS controls and integrations that improve how teams work
+              every day. I’m especially proud of the custom controls and React
+              applications I’ve built for IMS, where performance, clarity, and
+              long-term reliability really matter. Outside of programming, music
+              keeps me grounded and focused, while sports like badminton and
+              cricket keep me active and competitive. Both influence how I
+              work—staying disciplined, curious, and always looking to improve
+              without overcomplicating things.
             </p>
 
             {/* Stats */}
             <div className="flex gap-8 flex-wrap">
               <div>
-                <div className="text-3xl font-bold gradient-text">50+</div>
+                <div className="text-3xl font-bold gradient-text">20+</div>
                 <div className="text-sm text-muted-foreground">
                   Projects Completed
                 </div>
               </div>
               <div>
-                <div className="text-3xl font-bold gradient-text">30+</div>
+                <div className="text-3xl font-bold gradient-text">15+</div>
                 <div className="text-sm text-muted-foreground">
                   Happy Clients
                 </div>

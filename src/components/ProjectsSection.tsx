@@ -2,31 +2,40 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, Github, Folder } from "lucide-react";
+import toyTopiaImage from "@/assets/ToyTopia.png";
+import homeNestImage from "@/assets/HomeNest.png";
+import eTuitionBDImage from "@/assets/eTuitionBD.png";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-featured online shopping platform with cart management, payment integration, and admin dashboard.",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    github: "#",
-    live: "#",
+    title: "eTuitionBD - Tuition Management Platform",
+    description:
+      "A full-featured tuition management platform that connects students, tutors, and administrators through structured workflows for tuition posting, tutor applications, communication, and payments.",
+    tags: ["React", "Node.js", "Express.js", "MongoDB", "Firebase", "Stripe"],
+    github: "https://github.com/sakinkhan/eTuitionBD-b12a11-client.git",
+    live: "https://etuitionbd-sakinkhan.web.app/",
     color: "from-primary/20 to-accent/10",
+    image: eTuitionBDImage,
   },
   {
-    title: "Task Management App",
-    description: "A collaborative project management tool with real-time updates, drag-and-drop, and team features.",
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "WebSocket"],
-    github: "#",
-    live: "#",
+    title: "HomeNest - Real Estate Platform",
+    description:
+      "HomeNest is a real estate listing platform that enables property owners to publish rental or sale listings, while allowing users to browse, search, and filter properties by location, price range, and property type.",
+    tags: ["React", "Express.js", "MongoDB", "Firebase", "Node.js"],
+    github: "https://github.com/sakinkhan/homenest-b12a10-client.git",
+    live: "https://home-nest-app-485ea.web.app/",
     color: "from-accent/20 to-primary/10",
+    image: homeNestImage,
   },
   {
-    title: "Analytics Dashboard",
-    description: "Interactive data visualization dashboard with customizable charts, reports, and data export functionality.",
-    tags: ["React", "D3.js", "Express", "Redis"],
-    github: "#",
-    live: "#",
+    title: "ToyTopia - Online Marketplace for Local Toy Stores",
+    description:
+      "ToyTopia is an online marketplace designed to promote local toy stores by allowing families to browse, explore, and purchase children’s toys through a user-friendly, engaging interface.",
+    tags: ["React", "Tailwind CSS", "DaisyUI", "Firebase"],
+    github: "https://github.com/sakinkhan/toytopia-b12a9.git",
+    live: "https://toytopia-b12a09.web.app/",
     color: "from-primary/15 to-accent/15",
+    image: toyTopiaImage,
   },
 ];
 
@@ -49,7 +58,8 @@ const ProjectsSection = () => {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="section-subheading mx-auto">
-            Here are some of my recent projects that showcase my skills and experience.
+            Here are some of my recent projects that showcase my skills and
+            experience.
           </p>
         </motion.div>
 
@@ -63,15 +73,25 @@ const ProjectsSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               {/* Project Image Placeholder */}
-              <div className={`h-48 bg-gradient-to-br ${project.color} relative overflow-hidden`}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Folder className="w-16 h-16 text-foreground/20" />
-                </div>
-                
+              <div
+                className={`h-48 bg-gradient-to-br ${project.color} relative overflow-hidden`}
+              >
+                {/* Actual image */}
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Folder className="w-16 h-16 text-foreground/20" />
+                  </div>
+                )}
+
                 {/* Hover Overlay */}
-                <motion.div
-                  className="absolute inset-0 bg-background/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                >
+                <motion.div className="absolute inset-0 bg-background/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <motion.a
                     href={project.github}
                     className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -115,7 +135,7 @@ const ProjectsSection = () => {
         </div>
 
         {/* View More Button */}
-        <motion.div
+        {/* <motion.div
           className="text-center mt-12"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
@@ -130,7 +150,7 @@ const ProjectsSection = () => {
             View All Projects
             <ExternalLink size={16} />
           </motion.a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

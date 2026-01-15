@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
+import thklogoimage from "../assets/thk-logo.png";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -23,17 +24,26 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <motion.a
-            href="#"
+            href="/"
             className="text-xl font-bold gradient-text"
             whileHover={{ scale: 1.05 }}
           >
-            TH<span className="text-foreground">.</span>
+            {/* TH<span className="text-foreground">K.</span> */}
+            <img
+              src={thklogoimage}
+              alt="Tanvir Hossain Khan Logo"
+              className="w-12 h-12"
+            />
           </motion.a>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <a key={item.label} href={item.href} className="nav-link text-sm font-medium">
+              <a
+                key={item.label}
+                href={item.href}
+                className="nav-link text-sm font-medium"
+              >
                 {item.label}
               </a>
             ))}
