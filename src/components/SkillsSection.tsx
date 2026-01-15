@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 const skills = {
   frontend: [
-    "React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "Vue.js"
+    "JavaScript", "React", "TypeScript", "Next.js", "Tailwind CSS", "DaisyUI", "Framer Motion", "Vue.js"
   ],
   backend: [
     "Node.js", "Express", "PostgreSQL", "MongoDB", "GraphQL", "REST APIs"
