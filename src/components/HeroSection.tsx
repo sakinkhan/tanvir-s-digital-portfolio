@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowDown, Github, Linkedin } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -108,9 +108,6 @@ const HeroSection = () => {
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
                 <Linkedin size={18} />
-              </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
-                <Twitter size={18} />
               </a>
             </motion.div>
           </motion.div>
