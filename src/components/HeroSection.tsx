@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const HeroSection = () => {
   return (
@@ -126,9 +127,11 @@ const HeroSection = () => {
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               >
                 <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
-                  <div className="w-[95%] h-[95%] rounded-full bg-secondary flex items-center justify-center text-6xl font-bold gradient-text">
-                    TK
-                  </div>
+                  <img 
+                    src={profilePhoto} 
+                    alt="Tanvir Hossain Khan" 
+                    className="w-[95%] h-[95%] rounded-full object-cover"
+                  />
                 </div>
               </motion.div>
               
