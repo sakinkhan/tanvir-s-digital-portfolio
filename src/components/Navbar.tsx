@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -36,6 +37,7 @@ const Navbar = () => {
                 {item.label}
               </a>
             ))}
+            <ThemeToggle />
             <motion.a
               href="#contact"
               className="px-5 py-2 rounded-full bg-primary text-primary-foreground text-sm font-medium"
@@ -47,12 +49,15 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Toggle */}
-          <button
-            className="md:hidden text-foreground"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="flex items-center gap-4 md:hidden">
+            <ThemeToggle />
+            <button
+              className="text-foreground"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Nav */}
